@@ -33,6 +33,7 @@ The backend server will run on http://localhost:8080.
 - CORS – Cross-Origin Resource Sharing, enable CORS
 - MySQL – Relational database for storing task data
 - nodemon – Development utility (for auto-restart)
+- jest - for unit test cases
 
 ### 📌 API Endpoints
 Below is the list of available REST API endpoints provided by the backend:
