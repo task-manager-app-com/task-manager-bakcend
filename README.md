@@ -37,17 +37,10 @@ The backend server will run on http://localhost:8080.
 ### 📌 API Endpoints
 Below is the list of available REST API endpoints provided by the backend:
 
-+--------+--------------------------------------+--------------------------------------------+
-| Method | Endpoint                             | Description                                |
-+--------+--------------------------------------+--------------------------------------------+
 | POST   | /addTask                             | Add a new task                             |
-
 | GET    | /getTasks                            | Retrieve recent 5 todo tasks               |
-
 | GET    | /completedTasks                      | Retrieve completed tasks                   |
-
 | PATCH  | /completeTask/:id/complete           | Complete a task                            |
-+--------+--------------------------------------+--------------------------------------------+
 
 ## 🗄️ Database
 This project uses MySQL relational database to store data related to tasks and user interactions.
