@@ -1,26 +1,22 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const mongoose = require("mongoose");
 const taskRoutes = require("./routes/todoRoute");
 const app = express();
 const cors = require('cors');
 const mysql = require("mysql2");
 
-
 // Middleware
 app.use(bodyParser.json());
-// Enable CORS for all routes
 app.use(cors());
 app.use(express.json());
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: 'localhost',        // your MySQL host
-  user: 'root',             // your MySQL user
-  password: '',// your MySQL password
-  database: 'todo_db'  // your database name
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'todo_db'
 });
-
 
 db.connect((err) => {
   if (err) {
