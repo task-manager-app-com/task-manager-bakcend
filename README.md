@@ -1,6 +1,6 @@
 # 📄 Task Manager Application - Backend
 
-This is the backend application for the **Task Manager Application**, a platform that allows users to manage their futuer tasks. 
+This is the backend application for the **Task Manager Application**, a platform that allows users to manage their daily tasks. 
 
 ---
 
@@ -15,10 +15,10 @@ Follow these instructions to set up and run the backend server locally.
 ### 📦 Installation
 
 # Clone the repository
-https://github.com/Virtual-Pet-Adoption-Center/pet-adoption-backend.git
+https://github.com/task-manager-app-com/task-manager-bakcend.git
 
 # Navigate into the project directory
-cd pet-adoption-backend
+cd task-manager-bakcend
 
 # Install dependencies
 npm install
@@ -41,8 +41,11 @@ Below is the list of available REST API endpoints provided by the backend:
 | Method | Endpoint                             | Description                                |
 +--------+--------------------------------------+--------------------------------------------+
 | POST   | /addTask                             | Add a new task                             |
+
 | GET    | /getTasks                            | Retrieve recent 5 todo tasks               |
-| GET    | /completedTasks                      | Retrieve completed tasks                 |
+
+| GET    | /completedTasks                      | Retrieve completed tasks                   |
+
 | PATCH  | /completeTask/:id/complete           | Complete a task                            |
 +--------+--------------------------------------+--------------------------------------------+
 
