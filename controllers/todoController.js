@@ -1,13 +1,13 @@
 // Create a new task
 const addTask = (req, res) => {
-    const { name, description, is_completed = false, createAt = NOW() } = req.body;
+    const { name, description, is_completed = false } = req.body;
 
     const query = `
       INSERT INTO todos (name, description, is_completed, createAt)
-      VALUES (?, ?, ?)
+      VALUES (?, ?, ?, NOW())
     `;
 
-    req.db.query(query, [name, description, is_completed, createAt], (err, results) => {
+    req.db.query(query, [name, description, is_completed], (err, results) => {
         if (err) {
             console.error("Error creating task:", err);
             return res.status(500).json({ message: "Error creating new task", error: err });
@@ -22,6 +22,7 @@ const addTask = (req, res) => {
         });
     });
 };
+
 
 // Get up to 5 incomplete tasks
 const getAllTasks = (req, res) => {
